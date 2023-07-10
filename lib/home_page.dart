@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       '이현우',
       '김성학',
     ];
-    final List<String> coment = [
+    final List<String> comment = [
       '모두 화이팅입니다!!',
       '화이팅~~!',
       '열심히 해요!',
@@ -43,24 +43,31 @@ class HomePage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: ListView.separated(
-          itemCount: imagePath.length,
-          itemBuilder: (context, index) {
-            final image = imagePath[index];
-            final names = name[index];
-            final coments = coment[index];
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Feed(
-                imagePath: image,
-                name: names,
-                coment: coments,
+        child: Column(
+          children: [
+            Text("data"),
+            Expanded(
+              child: ListView.separated(
+                itemCount: imagePath.length,
+                itemBuilder: (context, index) {
+                  final image = imagePath[index];
+                  final names = name[index];
+                  final comments = comment[index];
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: Feed(
+                      imagePath: image,
+                      name: names,
+                      comment: comments,
+                    ),
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return Divider();
+                },
               ),
-            );
-          },
-          separatorBuilder: (context, index) {
-            return Divider();
-          },
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(

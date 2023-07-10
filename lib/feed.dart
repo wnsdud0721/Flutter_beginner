@@ -1,17 +1,20 @@
+import 'package:beginner/junyoung.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'main.dart';
 
 class Feed extends StatelessWidget {
   const Feed({
     super.key,
     required this.imagePath,
     required this.name,
-    required this.coment,
+    required this.comment,
   });
 
   final String imagePath;
   final String name;
-  final String coment;
+  final String comment;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +50,7 @@ class Feed extends StatelessWidget {
               ),
               SizedBox(height: 4),
               Text(
-                coment,
+                comment,
                 style: TextStyle(
                   fontSize: 14,
                 ),
@@ -56,7 +59,34 @@ class Feed extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            if (name == '홍준영') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => Junyoung()),
+              );
+            } else if (name == '박수홍') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => DetailPage()),
+              );
+            } else if (name == '이우준') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => DetailPage()),
+              );
+            } else if (name == '이현우') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => DetailPage()),
+              );
+            } else if (name == '김성학') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => DetailPage()),
+              );
+            }
+          },
           icon: Icon(CupertinoIcons.arrow_right),
         ),
       ],
