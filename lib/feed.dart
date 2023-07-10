@@ -68,22 +68,22 @@ class Feed extends StatelessWidget {
             } else if (name == '박수홍') {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => DetailPage()),
+                MaterialPageRoute(builder: (_) => Suhong()),
               );
             } else if (name == '이우준') {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => DetailPage()),
+                MaterialPageRoute(builder: (_) => Woojun()),
               );
             } else if (name == '이현우') {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => DetailPage()),
+                MaterialPageRoute(builder: (_) => Hyunwoo()),
               );
             } else if (name == '김성학') {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => DetailPage()),
+                MaterialPageRoute(builder: (_) => Sunghak()),
               );
             }
           },
