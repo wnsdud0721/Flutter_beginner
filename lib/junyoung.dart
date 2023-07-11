@@ -14,6 +14,7 @@ class Junyoung extends StatelessWidget {
         elevation: 0,
       ),
       body: Column(
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 30),
           Text(
@@ -213,6 +214,7 @@ class Like extends StatelessWidget {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 30),
           Text(
@@ -247,7 +249,6 @@ class Like extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
@@ -268,7 +269,6 @@ class Like extends StatelessWidget {
               ),
               SizedBox(width: 20),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
@@ -301,9 +301,76 @@ class Want extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.blue[200],
+        elevation: 2,
+        title: Text(
+          "Want",
+          style: TextStyle(
+            fontFamily: "Baloo2",
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: Center(
-        child: Text("Want's page"),
+        child: Column(
+          children: [
+            SizedBox(height: 30),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(
+                'assets/images/junyoung/sparta.png',
+                width: 330,
+                height: 165,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              "열심히 공부해서 배운 내용을 저의 지식으로 만들고 싶습니다!",
+              style: TextStyle(
+                fontFamily: "Yeongdeok",
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(height: 50),
+            Image.asset(
+              'assets/images/junyoung/iOS.jpeg',
+              width: 330,
+              height: 150,
+            ),
+            SizedBox(height: 10),
+            Text(
+              "2024년에는 개발자로 취직을 해서, 저의 대학생활"
+              "\n버킷리스트를 완성시키고 싶습니다 \u{1F4DD}",
+              style: TextStyle(
+                fontFamily: "Yeongdeok",
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            Text(
+              "."
+              "\n."
+              "\n.",
+              style: TextStyle(
+                fontFamily: "Yeongdeok",
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 30),
+            Text(
+              "먼 훗날에는 애플 본사에서 일하고 있을지도...? \u{1F974}",
+              style: TextStyle(
+                fontFamily: "Yeongdeok",
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }
