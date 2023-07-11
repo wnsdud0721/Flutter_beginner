@@ -50,7 +50,7 @@ class Junyoung extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Baloo2",
                     fontSize: 25,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                     color: Colors.blue[300],
                   ),
                 ),
@@ -71,7 +71,7 @@ class Junyoung extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Baloo2",
                     fontSize: 25,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                     color: Colors.blue[300],
                   ),
                 ),
@@ -92,7 +92,7 @@ class Junyoung extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Baloo2",
                     fontSize: 25,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                     color: Colors.blue[300],
                   ),
                 ),
@@ -214,7 +214,81 @@ class Like extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text("Like's page"),
+          SizedBox(height: 30),
+          Text(
+            '"모든 일의 시작은 도전이다."',
+            style: TextStyle(
+              fontFamily: "Yeongdeok",
+              fontSize: 25,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 20),
+          Text(
+            "제가 좋아하려고 하는 말입니다. 원래 도전을 좋아하는"
+            "\n성격은 아니었습니다. 그렇지만 도전의 필요성을 느끼고는"
+            "\n위의 말을 가슴에 새기고 도전이랑 친해지는 중입니다 \u{1F91D}"
+            "\n"
+            "\n예전에는 겁이나서 도전을 하지 못했던"
+            "\n다른 사람의 이야기를 잘 들어준다는 점이"
+            "\n밴드부와 교환학생에 도전을 해서,"
+            "\n정말 좋은 경험을 했습니다 \u{1F3B8} \u{2708}"
+            "\n"
+            "\n무대에서의 희열과, 새로운 친구들과 새로운 환경에서"
+            "\n공부를 했던 순간들은 잊혀지지 않을 것 같습니다 \u{1F60E}",
+            style: TextStyle(
+              fontFamily: "Yeongdeok",
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      'assets/images/junyoung/band.jpg',
+                      width: 150,
+                      height: 228,
+                    ),
+                  ),
+                  Text(
+                    "# 밴드부",
+                    style: TextStyle(
+                      fontFamily: "Yeongdeok",
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(width: 20),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      'assets/images/junyoung/IMG_1201.jpeg',
+                      width: 171,
+                      height: 228,
+                    ),
+                  ),
+                  Text(
+                    "# 교환학생",
+                    style: TextStyle(
+                      fontFamily: "Yeongdeok",
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );

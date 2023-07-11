@@ -69,6 +69,8 @@ flutter:
     - assets/images/junyoung/instagram.png
     - assets/images/junyoung/velog.png
     - assets/images/junyoung/infj.png
+    - assets/images/junyoung/band.jpg
+    - assets/images/junyoung/IMG_1201.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
