@@ -27,13 +27,13 @@ class Junyoung extends StatelessWidget {
               color: Colors.blue[300],
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 40),
           Image.asset(
-            'assets/images/junyoung/hjy_main.png',
-            width: 300,
+            'assets/images/junyoung/junyoungEmoji2.gif',
+            width: 400,
             height: 300,
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
