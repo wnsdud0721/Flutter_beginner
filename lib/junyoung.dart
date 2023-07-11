@@ -1,6 +1,7 @@
 // 준영's 자기소개 페이지
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Junyoung extends StatelessWidget {
   Junyoung({super.key});
@@ -28,7 +29,7 @@ class Junyoung extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Image.asset(
-            'assets/images/hjy_main.png',
+            'assets/images/junyoung/hjy_main.png',
             width: 300,
             height: 300,
           ),
@@ -105,26 +106,47 @@ class Junyoung extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  final url = Uri.parse(
+                    'https://www.instagram.com/junyoung2._.seo/',
+                  );
+                  if (await canLaunchUrl(url)) {
+                    launchUrl(url);
+                  }
+                },
                 iconSize: 40,
                 icon: Image.asset(
-                  'assets/images/instagram.png',
+                  'assets/images/junyoung/instagram.png',
                 ),
               ),
               SizedBox(width: 23),
               IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  final url = Uri.parse(
+                    'https://github.com/wnsdud0721',
+                  );
+                  if (await canLaunchUrl(url)) {
+                    launchUrl(url);
+                  }
+                },
                 iconSize: 40,
                 icon: Image.asset(
-                  'assets/images/github.png',
+                  'assets/images/junyoung/github.png',
                 ),
               ),
               SizedBox(width: 23),
               IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  final url = Uri.parse(
+                    'https://velog.io/@wnsdud0721',
+                  );
+                  if (await canLaunchUrl(url)) {
+                    launchUrl(url);
+                  }
+                },
                 iconSize: 36,
                 icon: Image.asset(
-                  'assets/images/velog.png',
+                  'assets/images/junyoung/velog.png',
                 ),
               ),
             ],
