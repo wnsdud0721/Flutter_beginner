@@ -45,7 +45,73 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
           children: [
-            Text("data"),
+            SizedBox(height: 15),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "팀 소개",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23,
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "저희는 5명의 I들이 만나서 즐겁게 작업하는 팀 입니다!",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "팀 규칙",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23,
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "• 13시에 점심먹기",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "• 18시에 저녁먹기",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "• Git Merge는 매일 6시에 하기",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
             Expanded(
               child: ListView.separated(
                 itemCount: imagePath.length,
