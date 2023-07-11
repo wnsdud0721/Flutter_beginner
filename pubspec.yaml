@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,18 @@ flutter:
     - assets/images/soohong.png
     - assets/images/junyoung3.png
     - assets/images/junyoung4.png
+    - assets/images/junyoung/junyoung_profile.jpeg
+    - assets/images/junyoung/hjy_main.png
+    - assets/images/junyoung/github.png
+    - assets/images/junyoung/instagram.png
+    - assets/images/junyoung/velog.png
+    - assets/images/junyoung/infj.png
+    - assets/images/junyoung/band.jpg
+    - assets/images/junyoung/IMG_1201.jpeg
+    - assets/images/junyoung/sparta.png
+    - assets/images/junyoung/iOS.jpeg
+    - assets/images/junyoung/junyoungEmoji.gif
+    - assets/images/junyoung/junyoungEmoji2.gif
     - assets/images/hyunwoo1.png
   #   - images/a_dot_ham.jpeg
 
@@ -77,10 +90,21 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Baloo2
+      fonts:
+        - asset: assets/fonts/Baloo2-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Baloo2-ExtraBold.ttf
+        - asset: assets/fonts/Baloo2-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Baloo2-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Baloo2-SemiBold.ttf
+          weight: 600
+    - family: Yeongdeok
+      fonts:
+        - asset: assets/fonts/Yeongdeok Sea.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
