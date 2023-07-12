@@ -1,4 +1,5 @@
 // 준영's 자기소개 페이지
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,11 +9,27 @@ class Junyoung extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final audioPlayer = AudioPlayer();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white10,
         iconTheme: IconThemeData(color: Colors.grey),
         elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await audioPlayer.play(AssetSource('audio/junyoungBGM.mp3'));
+              print("누름");
+            },
+            icon: Icon(CupertinoIcons.play),
+          ),
+          IconButton(
+            onPressed: () async {
+              await audioPlayer.pause();
+            },
+            icon: Icon(CupertinoIcons.pause),
+          ),
+        ],
       ),
       body: Column(
         //crossAxisAlignment: CrossAxisAlignment.center,
