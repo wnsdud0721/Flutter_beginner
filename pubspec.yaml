@@ -79,6 +79,10 @@ flutter:
     - assets/images/hyunwoo1.png
     - assets/images/hyunwoo2.png
     - assets/images/hyunwoo3.png
+    - assets/images/suhong/suhong12.jpeg
+    - assets/images/suhong/suhong123.jpeg
+    - assets/images/suhong/suhongggg.jpeg
+    - assets/images/suhong/suhong1233.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
