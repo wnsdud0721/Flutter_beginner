@@ -18,8 +18,8 @@ class Junyoung extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () async {
-              await audioPlayer
-                  .play(AssetSource('assets/audio/junyoungBGM.mp3'));
+              await audioPlayer.play(AssetSource('audio/junyoungBGM.mp3'));
+              print("누름");
             },
             icon: Icon(CupertinoIcons.play),
           ),
