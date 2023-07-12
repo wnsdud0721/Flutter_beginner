@@ -42,14 +42,14 @@ class _HyunwooState extends State<Hyunwoo> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(30),
               // ignore: sized_box_for_whitespace
               child: Stack(
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(
-                      height: 430,
+                      height: 250,
                       width: double.infinity,
                       child: PageView(
                         //온보딩 스크린
@@ -58,7 +58,7 @@ class _HyunwooState extends State<Hyunwoo> {
                             .map(
                               (number) => Image.asset(
                                 'assets/images/hyunwoo$number.png', //파일명에 따라 수정
-                                fit: BoxFit.cover,
+                                fit: BoxFit.fill,
                               ),
                             )
                             .toList(),
@@ -69,7 +69,7 @@ class _HyunwooState extends State<Hyunwoo> {
                     padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                     child: Container(
                       width: double.infinity,
-                      height: 420,
+                      height: 240,
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -102,7 +102,7 @@ class _HyunwooState extends State<Hyunwoo> {
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
                   width: double.infinity,
-                  height: 200,
+                  height: 350,
                   color: Colors.grey,
                   alignment: Alignment.topLeft,
                   child: Padding(
