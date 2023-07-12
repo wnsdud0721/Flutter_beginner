@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.12
+  audioplayers: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +85,7 @@ flutter:
     - assets/images/suhong/suhongggg.jpeg
     - assets/images/suhong/suhong1233.jpeg
     - assets/images/Woojun_image.png
+    - assets/audio/junyoungBGM.mp3
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
