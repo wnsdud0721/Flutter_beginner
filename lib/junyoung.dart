@@ -7,167 +7,174 @@ import 'package:url_launcher/url_launcher.dart';
 class Junyoung extends StatelessWidget {
   Junyoung({super.key});
 
+  final audioPlayer = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
-    final audioPlayer = AudioPlayer();
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white10,
-        iconTheme: IconThemeData(color: Colors.grey),
-        elevation: 0,
-        actions: [
-          IconButton(
-            onPressed: () async {
-              await audioPlayer.play(AssetSource('audio/junyoungBGM.mp3'));
-            },
-            icon: Icon(CupertinoIcons.play),
-          ),
-          IconButton(
-            onPressed: () async {
-              await audioPlayer.pause();
-            },
-            icon: Icon(CupertinoIcons.pause),
-          ),
-        ],
-      ),
-      body: Column(
-        //crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(height: 30),
-          Text(
-            "Hello I am Junyoung",
-            style: TextStyle(
-              fontFamily: "Baloo2",
-              fontSize: 35,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue[300],
+    return WillPopScope(
+      onWillPop: () async {
+        await audioPlayer.stop();
+        return true;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white10,
+          iconTheme: IconThemeData(color: Colors.grey),
+          elevation: 0,
+          actions: [
+            IconButton(
+              onPressed: () async {
+                await audioPlayer.play(AssetSource('audio/junyoungBGM.mp3'));
+              },
+              icon: Icon(CupertinoIcons.play),
             ),
-          ),
-          SizedBox(height: 40),
-          Image.asset(
-            'assets/images/junyoung/junyoungEmoji2.gif',
-            width: 400,
-            height: 300,
-          ),
-          SizedBox(height: 5),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => AboutMe()),
-                  );
-                },
-                child: Text(
-                  'About me',
-                  style: TextStyle(
-                    fontFamily: "Baloo2",
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.blue[300],
+            IconButton(
+              onPressed: () async {
+                await audioPlayer.pause();
+              },
+              icon: Icon(CupertinoIcons.pause),
+            ),
+          ],
+        ),
+        body: Column(
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 30),
+            Text(
+              "Hello I am Junyoung",
+              style: TextStyle(
+                fontFamily: "Baloo2",
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue[300],
+              ),
+            ),
+            SizedBox(height: 40),
+            Image.asset(
+              'assets/images/junyoung/junyoungEmoji2.gif',
+              width: 400,
+              height: 300,
+            ),
+            SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => AboutMe()),
+                    );
+                  },
+                  child: Text(
+                    'About me',
+                    style: TextStyle(
+                      fontFamily: "Baloo2",
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.blue[300],
+                    ),
                   ),
                 ),
-              ),
-              //SizedBox(width: 43),
-              TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => Like()),
-                  );
-                },
-                child: Text(
-                  'Like',
-                  style: TextStyle(
-                    fontFamily: "Baloo2",
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.blue[300],
+                //SizedBox(width: 43),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => Like()),
+                    );
+                  },
+                  child: Text(
+                    'Like',
+                    style: TextStyle(
+                      fontFamily: "Baloo2",
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.blue[300],
+                    ),
                   ),
                 ),
-              ),
-              //SizedBox(width: 91),
-              TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => Want()),
-                  );
-                },
-                child: Text(
-                  'Want',
-                  style: TextStyle(
-                    fontFamily: "Baloo2",
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.blue[300],
+                //SizedBox(width: 91),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => Want()),
+                    );
+                  },
+                  child: Text(
+                    'Want',
+                    style: TextStyle(
+                      fontFamily: "Baloo2",
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.blue[300],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 80),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
-                onPressed: () async {
-                  final url = Uri.parse(
-                    'https://www.instagram.com/junyoung2._.seo/',
-                  );
-                  if (await canLaunchUrl(url)) {
-                    launchUrl(url);
-                  }
-                },
-                iconSize: 40,
-                icon: Image.asset(
-                  'assets/images/junyoung/instagram.png',
+              ],
+            ),
+            SizedBox(height: 80),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () async {
+                    final url = Uri.parse(
+                      'https://www.instagram.com/junyoung2._.seo/',
+                    );
+                    if (await canLaunchUrl(url)) {
+                      launchUrl(url);
+                    }
+                  },
+                  iconSize: 40,
+                  icon: Image.asset(
+                    'assets/images/junyoung/instagram.png',
+                  ),
                 ),
-              ),
-              SizedBox(width: 23),
-              IconButton(
-                onPressed: () async {
-                  final url = Uri.parse(
-                    'https://github.com/wnsdud0721',
-                  );
-                  if (await canLaunchUrl(url)) {
-                    launchUrl(url);
-                  }
-                },
-                iconSize: 40,
-                icon: Image.asset(
-                  'assets/images/junyoung/github.png',
+                SizedBox(width: 23),
+                IconButton(
+                  onPressed: () async {
+                    final url = Uri.parse(
+                      'https://github.com/wnsdud0721',
+                    );
+                    if (await canLaunchUrl(url)) {
+                      launchUrl(url);
+                    }
+                  },
+                  iconSize: 40,
+                  icon: Image.asset(
+                    'assets/images/junyoung/github.png',
+                  ),
                 ),
-              ),
-              SizedBox(width: 23),
-              IconButton(
-                onPressed: () async {
-                  final url = Uri.parse(
-                    'https://velog.io/@wnsdud0721',
-                  );
-                  if (await canLaunchUrl(url)) {
-                    launchUrl(url);
-                  }
-                },
-                iconSize: 36,
-                icon: Image.asset(
-                  'assets/images/junyoung/velog.png',
+                SizedBox(width: 23),
+                IconButton(
+                  onPressed: () async {
+                    final url = Uri.parse(
+                      'https://velog.io/@wnsdud0721',
+                    );
+                    if (await canLaunchUrl(url)) {
+                      launchUrl(url);
+                    }
+                  },
+                  iconSize: 36,
+                  icon: Image.asset(
+                    'assets/images/junyoung/velog.png',
+                  ),
                 ),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
