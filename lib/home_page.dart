@@ -15,21 +15,21 @@ class HomePage extends StatelessWidget {
       'assets/images/suhong/suhong12.jpeg',
       'assets/images/Woojun_image.png',
       'assets/images/hyunwoo1.png',
-      'assets/images/junyoung4.png',
+      //'assets/images/junyoung4.png',
     ];
     final List<String> name = [
       '홍준영',
       '박수홍',
       '이우준',
       '이현우',
-      '김성학',
+      //'김성학',
     ];
     final List<String> comment = [
       '모두 화이팅입니다!!',
       '열심히 달려보아요🔥',
       '열심히 해요!',
       '아잣아잣 화이팅!!',
-      '영차~~',
+      //'영차~~',
     ];
     return Scaffold(
       appBar: AppBar(
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
           children: [
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 8),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 20),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -180,7 +180,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Expanded(
               child: ListView.separated(
                 itemCount: imagePath.length,
