@@ -47,6 +47,7 @@ class Feed extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                   color: Colors.black,
+                  fontFamily: "Pretendard",
                 ),
                 softWrap: false,
                 maxLines: 2,
@@ -57,6 +58,7 @@ class Feed extends StatelessWidget {
                 comment,
                 style: TextStyle(
                   fontSize: 14,
+                  fontFamily: "Pretendard",
                 ),
               ),
             ],
