@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'feed.dart';
-import 'main.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,7 +26,7 @@ class HomePage extends StatelessWidget {
     ];
     final List<String> comment = [
       '모두 화이팅입니다!!',
-      '화이팅~~!',
+      '열심히 달려보아요🔥',
       '열심히 해요!',
       '아잣아잣 화이팅!!',
       '영차~~',
@@ -187,6 +186,7 @@ class HomePage extends StatelessWidget {
                 itemCount: imagePath.length,
                 itemBuilder: (context, index) {
                   final image = imagePath[index];
+
                   final names = name[index];
                   final comments = comment[index];
                   return Padding(
@@ -205,16 +205,6 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          // + 버튼 클릭시 메모 생성 및 수정 페이지로 이동
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => DetailPage()),
-          );
-        },
       ),
     );
   }
