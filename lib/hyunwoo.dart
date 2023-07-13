@@ -42,14 +42,14 @@ class _HyunwooState extends State<Hyunwoo> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(30),
               // ignore: sized_box_for_whitespace
               child: Stack(
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(
-                      height: 430,
+                      height: 250,
                       width: double.infinity,
                       child: PageView(
                         //온보딩 스크린
@@ -58,7 +58,7 @@ class _HyunwooState extends State<Hyunwoo> {
                             .map(
                               (number) => Image.asset(
                                 'assets/images/hyunwoo$number.png', //파일명에 따라 수정
-                                fit: BoxFit.cover,
+                                fit: BoxFit.fill,
                               ),
                             )
                             .toList(),
@@ -69,7 +69,7 @@ class _HyunwooState extends State<Hyunwoo> {
                     padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                     child: Container(
                       width: double.infinity,
-                      height: 420,
+                      height: 240,
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -102,7 +102,7 @@ class _HyunwooState extends State<Hyunwoo> {
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
                   width: double.infinity,
-                  height: 200,
+                  height: 350,
                   color: Colors.grey,
                   alignment: Alignment.topLeft,
                   child: Padding(
@@ -115,8 +115,11 @@ class _HyunwooState extends State<Hyunwoo> {
                           height: 10,
                         ),
                         Text(
-                          '∙이름 : 이현우',
-                          style: TextStyle(fontSize: 20),
+                          '∙이름   : 이현우',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Dovemayo',
+                          ),
                         ),
                         Divider(
                           height: 0.5,
@@ -126,8 +129,11 @@ class _HyunwooState extends State<Hyunwoo> {
                           height: 3,
                         ),
                         Text(
-                          '∙이름 : 이현우',
-                          style: TextStyle(fontSize: 20),
+                          '∙나이   : 27',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Dovemayo',
+                          ),
                         ),
                         Divider(
                           height: 0.5,
@@ -137,8 +143,11 @@ class _HyunwooState extends State<Hyunwoo> {
                           height: 3,
                         ),
                         Text(
-                          '∙이름 : 이현우',
-                          style: TextStyle(fontSize: 20),
+                          '∙MBTI : ISFP',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Dovemayo',
+                          ),
                         ),
                         Divider(
                           height: 0.5,
@@ -147,10 +156,11 @@ class _HyunwooState extends State<Hyunwoo> {
                         SizedBox(
                           height: 3,
                         ),
-                        Text(
-                          '∙이름 : 이현우',
-                          style: TextStyle(fontSize: 20),
-                        ),
+                        Text('∙관심사 : 여행, 음악',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Dovemayo',
+                            )),
                         Divider(
                           height: 0.5,
                           color: Color.fromARGB(207, 207, 207, 207),
@@ -159,8 +169,11 @@ class _HyunwooState extends State<Hyunwoo> {
                           height: 3,
                         ),
                         Text(
-                          '∙이름 : 이현우',
-                          style: TextStyle(fontSize: 20),
+                          '∙이번 도전을 통해 처음 해보는일들을 많이 겪게 되겠지만 잘헤쳐나가서 성장해나가고싶습니다 잘부탁드립니다!',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Dovemayo',
+                          ),
                         ),
                         Divider(
                           height: 0.5,
