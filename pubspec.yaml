@@ -121,7 +121,6 @@ flutter:
     - family: Pretendard
       fonts:
         - asset: assets/fonts/PretendardVariable.ttf
- fonts:
     - family: Dovemayo
       fonts:
         - asset: assets/fonts/Dovemayo_wild.ttf
