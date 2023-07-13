@@ -1,16 +1,11 @@
-# beginner
+# 🍀 beginner
 
-A new Flutter project.
+### 내일배움캠프iOS의 첫 미니과제 입니다!
 
-## Getting Started
+- 플러터가 처음이고, 아직 개발이 익숙하지 않은 4명의 초보 개발자들의 소개페이지 입니다.
 
-This project is a starting point for a Flutter application.
+- 저희의 팀명은 Beginner입니다. 초보자라는 뜻과 항상 초심자의 마음을 잃지 말자 라는 뜻입니다.
 
-A few resources to get you started if this is your first Flutter project:
+- 첫 페이지에서는 팀의 소개와 규칙을 볼 수 있습니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 각 팀원들의 간단한 프로필과 이름, 각오가 적혀 있고, 화살표 버튼을 누르면 각자의 페이지로 이동합니다.
