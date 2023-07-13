@@ -86,11 +86,11 @@ class Feed extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (_) => Hyunwoo()),
               );
-            } else if (name == '김성학') {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => Sunghak()),
-              );
+              // } else if (name == '김성학') {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (_) => Sunghak()),
+              //   );
             }
           },
           icon: Icon(CupertinoIcons.arrow_right),
